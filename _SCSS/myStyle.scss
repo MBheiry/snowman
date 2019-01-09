@@ -1,0 +1,60 @@
+
+.snowman{
+    // background-color: gray;
+    margin: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    >*{
+        width: 200px;
+        height: 200px;
+        // background-color: #fff;
+        background-color: lightgray;
+        border-radius: 40%;
+        border: 3px solid gray;
+    }
+
+    // *{ display: inherit; }
+    &-A{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        z-index: 10;
+        // .eyes{
+        //     .left{}
+        //     .right{}
+        // }
+        // .nose{}
+        // .mouth{}
+        .shadow{ width: 80px; height: 90px; }
+
+    }
+    &-B{
+        width: 160px;
+        height: 130px;
+        border-radius: 45%;
+        margin-top: -20px;
+        z-index: 8;
+        .shadow{ width: 140px; height: 120px; }
+
+    }
+    &-C{
+        z-index: 6;
+        margin-top: -20px;
+        // background-color: gray;
+        .shadow{ width: 180px; height: 190px; }
+
+    }
+}
+
+.shadow{
+    background-color: #fff;
+    border-radius: inherit;
+}
+
+
+
+
+
