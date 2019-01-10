@@ -8,9 +8,6 @@
     align-items: center;
     
     >*{
-        width: 200px;
-        height: 200px;
-        // background-color: #fff;
         background-color: lightgray;
         border-radius: 40%;
         border: 3px solid gray;
@@ -19,8 +16,6 @@
     // *{ display: inherit; }
     &-A{
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
         z-index: 10;
         // .eyes{
         //     .left{}
@@ -28,23 +23,35 @@
         // }
         // .nose{}
         // .mouth{}
-        .shadow{ width: 80px; height: 90px; }
+
+        $w: 100px; $h: 100px;
+        width: $w; height: $h;
+        .shadow{ width: $w - 20; height: $h - 10; }
 
     }
     &-B{
-        width: 160px;
-        height: 130px;
+        $w: 160px; $h: 130px;
+        width: $w; height: $h;
+        > .shadow{ width: $w - 20; height: $h - 10; }
+
         border-radius: 45%;
         margin-top: -20px;
         z-index: 8;
-        .shadow{ width: 140px; height: 120px; }
+
+        display: flex;
+        flex-flow: row;
+
+        .bullet{ margin-left: ($w / 2) - 10 }
 
     }
     &-C{
         z-index: 6;
         margin-top: -20px;
         // background-color: gray;
-        .shadow{ width: 180px; height: 190px; }
+
+        $w: 200px; $h: 200px;
+        width: $w; height: $h;
+        .shadow{ width: $w - 20; height: $h - 10; }
 
     }
 }
@@ -52,6 +59,34 @@
 .shadow{
     background-color: #fff;
     border-radius: inherit;
+    z-index: 20;
+}
+
+.bullet{
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100px;
+    align-self: center;
+    position: absolute;
+    margin-left: 70px;
+    // ---------
+
+    > *{
+        $w: 20px;
+        $shadow: $w - 10;
+        width: $w; height: $w;
+        > .shadow{ 
+            width: $shadow; 
+            height: $shadow; 
+            background-color: #fff; 
+        }
+    
+        border-radius: 42%;
+        background-color: black;
+        z-index: 200000;
+    }
+
 }
 
 
