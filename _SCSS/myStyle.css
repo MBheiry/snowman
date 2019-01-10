@@ -28,6 +28,20 @@
   height: 100px;
 }
 
+.snowman-A .eyes.bullet {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.snowman-A .eyes.bullet > * {
+  border-radius: 50%;
+}
+
 .snowman-A .shadow {
   width: 80px;
   height: 90px;

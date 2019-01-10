@@ -17,10 +17,23 @@
     &-A{
         border-radius: 50%;
         z-index: 10;
-        // .eyes{
-        //     .left{}
-        //     .right{}
-        // }
+        // -----------------
+
+        .eyes{
+            &.bullet{
+                flex-direction: row;
+                width: 60px;
+                height: auto;
+                margin: 10px;
+                >*{
+                    border-radius: 50%;
+                }
+            }
+            // .left{}
+            // .right{}
+        }
+        // -----------------
+
         // .nose{}
         // .mouth{}
 
